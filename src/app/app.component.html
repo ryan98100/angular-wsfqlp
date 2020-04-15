@@ -10,8 +10,23 @@
 {{a*b}}
 <br><br>
 
-<div>
-  {{item[0].nama}} ada {{item[1].jumlah | currency : 'Rp'}}
+<div *ngFor = "let buah of itembuah;let i = index">
+ {{i+1}}. {{buah.nama}} ada {{buah.jumlah | currency : 'Rp'}}
 </div>
+<!-- ngfor itu loop let itu variable -->
 
 
+<p *ngIf="show">Tampilkan jika nilai show = true</p>
+<br>
+<ng-template *ngIf="show; then showBlock;else notshowBlock"></ng-template>
+
+<ng-template #showBlock>
+  FUCK U
+</ng-template>
+
+<ng-template #notshowBlock>
+  STILL FUCK U
+</ng-template>
+<br>
+<button (click) = "klikbutton()">FUCK ME</button>
+{{pesan}}

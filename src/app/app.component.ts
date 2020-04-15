@@ -7,12 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent  {
   name = 'Ryan';
-  item = [{
-    nama:'Kelengkeng',
-    jumlah: 1
-  },
-  {
-    nama:'Kelereng',
-    jumlah:3
-  }]
+  itembuah = [{
+    nama:'Apel',
+    jumlah: 1000
+  },{
+    nama:'Jerul',
+    jumlah:3000
+  }];
+  show = false;
+  pesan="";
+  klikbutton(){
+    this.pesan = 'tombol ditekan';
+  }
 }
